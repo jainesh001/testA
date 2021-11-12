@@ -21,6 +21,12 @@ jobs:
 
       - name: Commit & push changes
         run: |
-          echo Hello, world!${{ secrets.USER_NAME }}${{ secrets.USER_EMAIL }}
+          if ["hel"="Jainesh Captain"]
+          then
+            echo Hello, world!secret
+          fi
+        env: 
+          hel: ${{ secrets.USER_NAME }}
+        
       
          
