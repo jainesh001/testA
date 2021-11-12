@@ -18,10 +18,11 @@ jobs:
         run: |
           git submodule update --init --recursive
           git submodule update --recursive --remote
-
+          
       - name: Commit & push changes
+        run: |
           git status
-          git commit -m "submodules updated"
+          git commit -am "Update submodules"
           git push
 
         
