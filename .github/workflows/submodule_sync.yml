@@ -14,19 +14,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-#       - name: update submodules
-#         run: |
-#           git submodule update --init --recursive
-#           git submodule update --recursive --remote
+      - name: update submodules
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
 
       - name: Commit & push changes
-        run: |
-          if [ "$hel" == "Jainesh Captain" ]
-          then
-            echo "Hello, world!secret"
-          fi
-        env: 
-          hel: ${{ secrets.USER_NAME }}
+          git status
+          git commit -m "submodules updated"
+          git push
+
         
       
          
